@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 """
-The setup and build script for the bloget library.
+The setup and build script for the script.
 """
 
 import setuptools  # type: ignore
@@ -12,7 +12,7 @@ with open("README.md", encoding="utf-8") as readme:
 setuptools.setup(
     name="columbo",
     version="1.0.0",
-    description="???",
+    description="Parses git log output to show which files were changed by a user",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/vkostyanetsky/Columbo",

@@ -1,14 +1,15 @@
 #!/usr/bin/env python3
 
 """
-Logging, arguments parser & actions router implementations.
+App's logic implementation.
 """
 
 import subprocess
 
+
 def main() -> None:
     """
-    Main entry point of the application.
+    Main (and single) entry point of the application.
     """
 
     lines = subprocess.check_output(
@@ -25,7 +26,7 @@ def main() -> None:
     ).splitlines()
 
     author = ""
-    authors = {}
+    authors: dict[str, list[str]] = {}
 
     for line in lines:
         if line.strip() == "":
@@ -46,6 +47,8 @@ def main() -> None:
         authors[author].sort()
 
         print(author)
+
         for file in authors[author]:
             print(file)
+
         print()
